@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" type="png" sizes="16px">
+<title>To Do List</title>
+</head>
+
+<body class="full-body" id="body_dark">
+<div class="main" id="main_dark">
+<div class="container" id="container_dark">
+<div class="container__option">
+
+
+ <!-- -----------------------------------------------------botones para cambiar a modo oscuro y lista y color      -->
+<span class="container__span left"><button class="container__a" id="myButton">    
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: var(--color1);transform: msFilter"><path d="m2.344 15.271 2 3.46a1 1 0 0 0 1.366.365l1.396-.806c.58.457 1.221.832 1.895 1.112V21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1.598a8.094 8.094 0 0 0 1.895-1.112l1.396.806c.477.275 1.091.11 1.366-.365l2-3.46a1.004 1.004 0 0 0-.365-1.366l-1.372-.793a7.683 7.683 0 0 0-.002-2.224l1.372-.793c.476-.275.641-.89.365-1.366l-2-3.46a1 1 0 0 0-1.366-.365l-1.396.806A8.034 8.034 0 0 0 15 4.598V3a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v1.598A8.094 8.094 0 0 0 7.105 5.71L5.71 4.904a.999.999 0 0 0-1.366.365l-2 3.46a1.004 1.004 0 0 0 .365 1.366l1.372.793a7.683 7.683 0 0 0 0 2.224l-1.372.793c-.476.275-.641.89-.365 1.366zM12 8c2.206 0 4 1.794 4 4s-1.794 4-4 4-4-1.794-4-4 1.794-4 4-4z" id="svg1" class="svg2"></path></svg>
+</button></span>
+
+<span class="container__span rigth"><button class="container__a modedark" id="darkmode">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: var(--color1);transform: msFilter"><path d="M     
+20.742 13.045a8.088 8.088 0 0 1-2.077.271c-2.135 0-4.14-.83-5.646-2.336a8.025 8.025 0 0 1-2.064-7.723A1 1 0 0 0 9.73 2.034a10.014 10.014 0 0 0-4.489 2.582c-3.898 3.898-3.898 10.243 0 14.143a9.937 9.937 0 0 0 7.072 2.93 9.93 9.93 0 0 0 7.07-2.929 10.007 10.007 0 0 0 2.583-4.491 1.001 1.001 0 0 0-1.224-1.224zm-2.772 4.301a7.947 7.947 0 0 1-5.656 2.343 7.953 7.953 0 0 1-5.658-2.344c-3.118-3.119-3.118-8.195 0-11.314a7.923 7.923 0 0 1 2.06-1.483 10.027 10.027 0 0 0 2.89 7.848 9.972 9.972 0 0 0 7.848 2.891 8.036 8.036 0 0 1-1.484 2.059z" class="svg2" id="svg2"></path></svg>
+</button></span>
+    
+<!----------------------------------------------------------------------------------------------- modal -->
+<div id="myModal" class="modal">
+<div class="modal-content" id="modalD">
+
+<div class="container-close">
+<span class="close">&times;</span>
+</div>
+
+<div class="parr">
+<p class="parr__p">Sort list by</p>
+<select name="optionlist" class="parr__select" id="list_option">
+<option class="parr__option">numbers</option>
+<option class="parr__option">square</option>
+<option class="parr__option">circle</option>
+<option class="parr__option">lower-roman</option>
+<option class="parr__option">lower-alpha</option>
+<option class="parr__option">none</option>
+</select>
+
+<p class="parr__p">Color</p>
+<select name="optionlist" class="parr__select" id="list_color">
+    <option class="parr__option">white</option>
+    <option class="parr__option">gray</option>
+    <option class="parr__option">Greenyellow</option>
+    <option class="parr__option">Orange</option>
+    <option class="parr__option">Pink</option>
+    <option class="parr__option">none</option>
+</select>
+<button class="parr__btn" id="parr-btn">Save Changes</button>
+</div>
+</div>
+</div>
+
+
+<!-- ---------------------------------------encabezado de la pagina  -->
+
+<div class="titlec">
+<h1 class="container__title" id="fulltitle">To Do List</h1>
+</div>
+</div>
+</div>
+
+<div class="body" id="content_dark">
+<div class="body__content">
+<div class="form">
+
+<input
+autocomplete="off"
+type="text" id="new-item" class="form__input" placeholder="Introduce your task...">
+<button type="button" id="add-button" class="form__btn">Add</button>
+
+</div>
+<div class="list">
+<ul id="todo-list" class="list__ul">
+</ul>
+</div>
+
+</div>
+</div>
+
+
+
+<!-- ----------------------------------------------------------footer de la pagina  -->
+<footer class="footer" id="footer_dark">
+    <h2 class="footer__copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #aaaaaa;transform: msFilter"><path d="M12 22c5.421 0 10-4.579 10-10S17.421 2 12 2 2 6.579 2 12s4.579 10 10 10zm0-18c4.337 0 8 3.663 8 8s-3.663 8-8 8-8-3.663-8-8 3.663-8 8-8z"></path><path d="M12 17c.901 0 2.581-.168 3.707-1.292l-1.414-1.416C13.85 14.735 12.992 15 12 15c-1.626 0-3-1.374-3-3s1.374-3 3-3c.993 0 1.851.265 2.293.707l1.414-1.414C14.582 7.168 12.901 7 12 7c-2.757 0-5 2.243-5 5s2.243 5 5 5z"></path></svg> Proyect by: <a href="http://codenew.is-best.net/index.html" class="footer__copy footer__a" target="_blank"> Andreé Hernandez</a></h2>
+    <h2 class="footer__copy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #aaaaaa;transform: msFilter"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg>GitHub:  <a href="https://github.com/AndreeInput" class="footer__copy footer__a" target="_blank"> AndreeInput</a></h2>
+</footer>
+
+</div>
+</body>
+<script src="./main.js"></script>
+</html>
